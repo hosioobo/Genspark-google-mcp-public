@@ -1,0 +1,17 @@
+node_modules/
+dist/
+*.log
+.omx/
+.env*
+!.env.example
+gcp-oauth.keys.json
+client_secret*.json
+google-tokens.json
+.gcp-saved-tokens.json
+*.secrets.json
+service-account*.json
+.DS_Store
+.vscode/
+.idea/
+coverage/
+core

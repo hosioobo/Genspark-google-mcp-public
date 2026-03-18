@@ -1,0 +1,35 @@
+{
+    "name": "genspark-google-workspace-mcp",
+    "version": "1.7.2",
+    "description": "Remote Streamable HTTP MCP server for Google Drive/Docs/Sheets/Slides",
+    "license": "MIT",
+    "type": "module",
+    "scripts": {
+        "dev": "tsx watch src/index.ts",
+        "typecheck": "tsc --noEmit",
+        "build": "tsdown",
+        "start": "node dist/index.mjs",
+        "test:hotfix": "node --import tsx --test test/hotfix/*.test.ts",
+        "test:smoke": "node --import tsx --test test/smoke.test.ts",
+        "test": "npm run test:hotfix && npm run test:smoke"
+    },
+    "dependencies": {
+        "@google-cloud/firestore": "^8.3.0",
+        "@google-cloud/kms": "^5.4.0",
+        "@hono/node-server": "^1.19.11",
+        "@modelcontextprotocol/sdk": "^1.27.1",
+        "argon2": "^0.44.0",
+        "google-auth-library": "^9.15.0",
+        "googleapis": "^144.0.0",
+        "hono": "^4.12.5",
+        "xlsx": "^0.18.5",
+        "zod": "^3.25.76",
+        "zod-to-json-schema": "^3.25.1"
+    },
+    "devDependencies": {
+        "@types/node": "^22.9.3",
+        "tsdown": "^0.21.0",
+        "tsx": "^4.21.0",
+        "typescript": "^5.6.2"
+    }
+}
